@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa66c3b3-10ef-4271-8eae-2930518ca4fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/flutter" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
@@ -62,18 +63,34 @@
     <state width="1874" height="268" key="GridCell.Tab.0.bottom" timestamp="1595122884951">
       <screen x="4480" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1595125366684">
+      <screen x="4480" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.bottom.inPresentationMode/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595125366684" />
     <state width="1874" height="268" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595122884951" />
     <state width="1874" height="268" key="GridCell.Tab.0.center" timestamp="1595122884951">
       <screen x="4480" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1595125366684">
+      <screen x="4480" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.center.inPresentationMode/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595125366684" />
     <state width="1874" height="268" key="GridCell.Tab.0.center/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595122884951" />
     <state width="1874" height="268" key="GridCell.Tab.0.left" timestamp="1595122884951">
       <screen x="4480" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1595125366684">
+      <screen x="4480" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.left.inPresentationMode/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595125366684" />
     <state width="1874" height="268" key="GridCell.Tab.0.left/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595122884951" />
     <state width="1874" height="268" key="GridCell.Tab.0.right" timestamp="1595122884951">
       <screen x="4480" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1595125366684">
+      <screen x="4480" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.right.inPresentationMode/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595125366684" />
     <state width="1874" height="268" key="GridCell.Tab.0.right/1920.0.2560.1440/0.27.1920.1009/4480.0.1920.1080@4480.0.1920.1080" timestamp="1595122884951" />
     <state x="4929" y="153" width="1022" height="737" key="SettingsEditor" timestamp="1595120201630">
       <screen x="4480" y="0" width="1920" height="1080" />
