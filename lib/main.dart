@@ -3,36 +3,54 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        body: ListTransfers(),
-        appBar: AppBar(
-          title: Text('Transferências'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-        ),
-      ),
-    )
-  );
+  runApp(BytebankApp());
 }
 
-class ListTransfers extends StatelessWidget{
+class BytebankApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ItensTransfers(Transfer(100.0, 1001)),
-        ItensTransfers(Transfer(200.0, 1001)),
-        ItensTransfers(Transfer(300.0, 3003)),
-      ],
+    return MaterialApp(
+      home: Scaffold(
+        body: FormTransfer(),
+      ),
+    );
+  }
+}
+
+
+class FormTransfer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Text('teste')
+    );
+  }
+}
+
+
+class ListTransfers extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Transferências'),
+      ),
+      body: Column(
+        children: [
+          ItensTransfers(Transfer(100.0, 1001)),
+          ItensTransfers(Transfer(200.0, 1001)),
+          ItensTransfers(Transfer(300.0, 3003)),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
 
 class ItensTransfers extends StatelessWidget {
-
   final Transfer _transfer;
 
   ItensTransfers(this._transfer);
@@ -47,7 +65,6 @@ class ItensTransfers extends StatelessWidget {
       ),
     );
   }
-
 }
 
 class Transfer {
@@ -55,5 +72,4 @@ class Transfer {
   final int accountNumber;
 
   Transfer(this.value, this.accountNumber);
-
 }
