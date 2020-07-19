@@ -6,7 +6,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: ListaTransfers(),
+        body: ListTransfers(),
         appBar: AppBar(
           title: Text('Transferências'),
         ),
@@ -18,7 +18,7 @@ void main() {
   );
 }
 
-class ListaTransfers extends StatelessWidget{
+class ListTransfers extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Column(
