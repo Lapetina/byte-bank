@@ -18,7 +18,15 @@ class BytebankApp extends StatelessWidget {
 }
 
 
-class FormTransfer extends StatelessWidget {
+class FormTransfer extends StatefulWidget {
+
+  @override
+  State<StatefulWidget> createState() {
+    return FormTransferState();
+  }
+}
+
+class FormTransferState extends State<FormTransfer> {
   final TextEditingController _controlAccountNumber = TextEditingController();
   final TextEditingController _controlValue = TextEditingController();
 
@@ -28,34 +36,37 @@ class FormTransfer extends StatelessWidget {
       appBar: AppBar(
         title: Text('Criando Transferência'),
       ),
-      body: ListView(
-        children: <Widget>[
-          Edit(
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Edit(
               controller: _controlAccountNumber,
               label: 'Número da conta',
               tip: '0000'
-          ),
-          Edit(
-            controller: _controlValue,
-            label: 'Valor',
-            tip: '0.00',
-            icon: Icons.monetization_on,
-          ),
-          RaisedButton(
-            child: Text('Confirmar'),
-            onPressed: () {
-              _createTransfer(context);
-            },
-          )
-        ],
+            ),
+            Edit(
+              controller: _controlValue,
+              label: 'Valor',
+              tip: '0.00',
+              icon: Icons.monetization_on,
+            ),
+            RaisedButton(
+              child: Text('Confirmar'),
+              onPressed: () {
+                _createTransfer(context);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
 
   void _createTransfer(BuildContext context) {
-    final int accountNumber = int.tryParse(
-        _controlAccountNumber.text);
-    final double valueNumber = double.tryParse(_controlValue.text);
+    final int accountNumber =
+    int.tryParse(_controlAccountNumber.text);
+    final double valueNumber =
+    double.tryParse(_controlValue.text);
     if (accountNumber != null && valueNumber != null) {
       final transfer = Transfer(accountNumber, valueNumber);
       Navigator.pop(context, transfer);
@@ -126,7 +137,9 @@ class ListTransferState extends State<ListTransfers> {
         );
         future.then((transferReciver){
           setState(() {
-            widget._transfer.add(transferReciver);
+            if(transferReciver != null){
+              widget._transfer.add(transferReciver);
+            }
           });
           debugPrint('$transferReciver');
 
