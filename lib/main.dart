@@ -94,8 +94,17 @@ class Edit extends StatelessWidget {
 }
 
 
-class ListTransfers extends StatelessWidget{
+class ListTransfers extends StatefulWidget{
   final List<Transfer> _transfer = List();
+
+  @override
+  State<StatefulWidget> createState() {
+    return ListTransferState();
+  }
+}
+
+class ListTransferState extends State<ListTransfers> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,22 +112,26 @@ class ListTransfers extends StatelessWidget{
         title: Text('Transferências'),
       ),
       body: ListView.builder(
-        itemCount: _transfer.length,
+        itemCount: widget._transfer.length,
         itemBuilder: (context, index) {
-          final transfer = _transfer[index];
+          final transfer = widget._transfer[index];
           return ItensTransfers(transfer);
         },
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add), onPressed: () {
-          final Future<Transfer> future = Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return FormTransfer();
-            }),
-          );
-          future.then((transferReciver){
-            debugPrint('$transferReciver');
+        final Future<Transfer> future = Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return FormTransfer();
+        }),
+        );
+        future.then((transferReciver){
+          setState(() {
+            widget._transfer.add(transferReciver);
           });
-        },
+          debugPrint('$transferReciver');
+
+        });
+      },
       ),
     );
   }
